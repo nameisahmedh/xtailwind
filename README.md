@@ -15,6 +15,10 @@ This project is a responsive clone of **X (formerly Twitter)**, built using **Ta
 - **Vite**: A fast build tool and development server for dynamic CSS updates.
 - **HTML**: Provides the structure of the clone.
 
+## Live Demo
+
+Check out the live demo of the project here: [X Clone Demo](https://xtailwind.freewebhostmost.com/)
+
 ## Installation
 
 Follow these steps to implement and run the code:
@@ -50,17 +54,41 @@ Follow these steps to implement and run the code:
    };
    ```
 
-5. **Run the Development Server**
-   Start the Vite development server for live reloading and dynamic CSS updates:
+5. **Set Up Input and Output CSS**
+   Create the `src/input.css` file and include the Tailwind directives:
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+   
+   The output CSS file (`src/output.css`) will be generated automatically when you run the Tailwind CLI.
+
+6. **Run Tailwind CSS in Watch Mode**
+   Use the following script to dynamically update the CSS:
+   ```bash
+   npm run watch
+   ```
+   This command uses the script defined in your `package.json`:
+   ```json
+   "scripts": {
+     "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+   }
+   ```
+
+7. **Run the Development Server**
+   Start the Vite development server for live reloading:
    ```bash
    npm run dev
    ```
 
-6. **View the Project**
+8. **View the Project**
    Open your browser and navigate to:
    ```
    http://localhost:3000
    ```
+
+   Note: If you're running the project in VS Code with a local server, the server might start at a URL like `http://127.0.0.1:1200`. Open this URL in your browser to view the project.
 
 ## Usage
 
@@ -74,7 +102,8 @@ Follow these steps to implement and run the code:
 project-folder/
 |-- index.html         # Main HTML file
 |-- src/
-|   |-- index.css      # Tailwind CSS directives
+|   |-- input.css      # Tailwind CSS directives
+|   |-- output.css     # Generated CSS file
 |-- tailwind.config.js # Tailwind CSS configuration file
 |-- package.json       # Project dependencies and scripts
 |-- README.md          # Project documentation
@@ -85,12 +114,6 @@ project-folder/
 - **Sticky Header**: A top navigation bar that uses the `sticky` class for fixed positioning during scrolling.
 - **Hover Effects**: Implemented using Tailwind's `hover:` utilities for interactive transitions.
 - **Divider Lines**: Created with Tailwind's `border` classes for clean separations.
-
-## Screenshots
-
-### Desktop View
-![Desktop View](https://xtailwind.freewebhostmost.com/)
-
 
 ## Challenges
 
@@ -122,13 +145,12 @@ Contributions are welcome! To contribute:
    ```
 5. Open a pull request.
 
-## License
-
-This project is licensed under the [AHMED License](LICENSE).
-
 ## Acknowledgments
 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Vite Documentation](https://vitejs.dev/guide/)
 - Inspired by the design and functionality of X.
+
+---
+**Created by Ahmed**
 
