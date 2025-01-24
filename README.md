@@ -89,10 +89,8 @@ project-folder/
 ## Screenshots
 
 ### Desktop View
-![Desktop View](https://via.placeholder.com/800x400)
+![Desktop View](https://xtailwind.freewebhostmost.com/)
 
-### Mobile View
-![Mobile View](https://via.placeholder.com/400x800)
 
 ## Challenges
 
@@ -126,7 +124,7 @@ Contributions are welcome! To contribute:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [AHMED License](LICENSE).
 
 ## Acknowledgments
 
